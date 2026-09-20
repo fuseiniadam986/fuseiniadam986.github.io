@@ -67,15 +67,12 @@ a:hover {
   gap: 10px;
 }
 
-.brand::before {
-  content: "";
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
-  background:
-    linear-gradient(135deg, rgba(19, 168, 139, 0.95), rgba(23, 103, 232, 0.95)),
-    #1767e8;
-  box-shadow: 0 8px 22px rgba(23, 103, 232, 0.28);
+.brand img {
+  display: block;
+  width: auto;
+  height: 34px;
+  max-width: 180px;
+  object-fit: contain;
 }
 
 .nav-links {
