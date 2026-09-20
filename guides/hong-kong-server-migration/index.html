@@ -9,14 +9,11 @@
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">指南首页</a><a href="/guides/hong-kong-server/">香港服务器</a><a href="/guides/cloud-quote-checklist/">报价核对</a></div></nav></header>
-  <main class="container article">
-    <p class="article-meta">迁移准备 · 更新于 2026-09-20</p>
-    <h1>网站迁移到香港服务器前，要准备哪些数据和回退方案</h1>
-    <p class="lead">迁移不是把文件复制过去就结束。真正稳妥的迁移，需要提前准备数据备份、运行环境、DNS 切换、证书、测试和回退方案。</p>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">指南首页</a><a href="/guides/hong-kong-server/">香港服务器</a><a href="/guides/cloud-quote-checklist/">报价核对</a></div><a class="header-cta" href="#wechat">微信咨询</a></nav></header>
+  <main><section class="article-hero"><div class="article-hero-inner"><div><p class="article-meta">迁移准备 · 更新于 2026-09-20</p><h1>网站迁移到香港服务器前，要准备哪些数据和回退方案</h1><p class="lead">迁移不是把文件复制过去就结束。真正稳妥的迁移，需要提前准备数据备份、运行环境、DNS 切换、证书、测试和回退方案。</p></div><div class="aside-card"><h3>扫码微信核对</h3><p>把配置、报价截图或业务场景发给聚搜云顾问，先核对再采购。</p><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></div></section><section class="article-layout"><article class="article-card">
 
     <h2>迁移前检查清单</h2>
-    <table>
+    <div class="table-wrap"><table>
       <thead><tr><th>项目</th><th>要准备什么</th></tr></thead>
       <tbody>
         <tr><td>网站文件</td><td>代码、图片、上传目录、配置文件</td></tr>
@@ -26,7 +23,7 @@
         <tr><td>HTTPS 证书</td><td>证书申请、续期方式、强制 HTTPS 设置</td></tr>
         <tr><td>回退方案</td><td>旧服务器保留时间、回切步骤、负责人</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h2>上线当天不要做太多未知变更</h2>
     <p>迁移期间同时换程序、换数据库版本、换缓存策略，会让问题排查变复杂。建议先完成等价迁移，再逐步优化配置。</p>
@@ -40,7 +37,7 @@
       <li>需要在低峰时间完成切换并可回退。</li>
     </ul>
 
-    <div class="wechat-box">
+    <div class="wechat-box" id="wechat">
       <img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码">
       <div>
         <h2>迁移前先微信核对</h2>
@@ -49,9 +46,9 @@
     </div>
 
     <p>如果还没确定服务器配置，先看 <a href="/guides/hong-kong-server/">香港服务器怎么选</a>。</p>
-  </main>
-  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云</div></footer>
+  </article><aside class="article-aside"><div class="aside-card"><h3>需要人工核对？</h3><p>不填表，直接扫码加微信，发送报价截图、用途、预算和访问地区。</p><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"><ul class="checklist"><li>核对带宽与续费</li><li>核对备份与迁移</li><li>核对售后服务边界</li></ul></div></aside></section></main><footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云</div></footer>
   <script src="/assets/site.js"></script>
 </body>
 </html>
+
 
