@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网站迁移到香港服务器前，要准备哪些数据和回退方案｜聚搜云</title>
+  <meta name="description" content="网站迁移到香港服务器前的检查清单，包括数据备份、DNS、证书、环境、回退方案和上线窗口，支持微信咨询。">
+  <link rel="canonical" href="https://fuseiniadam986.github.io/guides/hong-kong-server-migration/">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/">聚搜云</a><div class="nav-links"><a href="/guides/">指南首页</a><a href="/guides/hong-kong-server/">香港服务器</a><a href="/guides/cloud-quote-checklist/">报价核对</a></div></nav></header>
+  <main class="container article">
+    <p class="article-meta">迁移准备 · 更新于 2026-09-20</p>
+    <h1>网站迁移到香港服务器前，要准备哪些数据和回退方案</h1>
+    <p class="lead">迁移不是把文件复制过去就结束。真正稳妥的迁移，需要提前准备数据备份、运行环境、DNS 切换、证书、测试和回退方案。</p>
+
+    <h2>迁移前检查清单</h2>
+    <table>
+      <thead><tr><th>项目</th><th>要准备什么</th></tr></thead>
+      <tbody>
+        <tr><td>网站文件</td><td>代码、图片、上传目录、配置文件</td></tr>
+        <tr><td>数据库</td><td>完整备份、导出时间、字符集、恢复测试</td></tr>
+        <tr><td>运行环境</td><td>PHP、Node、Python、Nginx、数据库版本</td></tr>
+        <tr><td>域名 DNS</td><td>当前解析记录、TTL、切换时间</td></tr>
+        <tr><td>HTTPS 证书</td><td>证书申请、续期方式、强制 HTTPS 设置</td></tr>
+        <tr><td>回退方案</td><td>旧服务器保留时间、回切步骤、负责人</td></tr>
+      </tbody>
+    </table>
+
+    <h2>上线当天不要做太多未知变更</h2>
+    <p>迁移期间同时换程序、换数据库版本、换缓存策略，会让问题排查变复杂。建议先完成等价迁移，再逐步优化配置。</p>
+
+    <h2>什么时候需要人工协助</h2>
+    <ul class="checklist">
+      <li>网站有数据库或后台系统。</li>
+      <li>业务不能长时间中断。</li>
+      <li>不确定服务器环境如何复刻。</li>
+      <li>域名、证书、邮件、CDN 同时需要调整。</li>
+      <li>需要在低峰时间完成切换并可回退。</li>
+    </ul>
+
+    <div class="wechat-box">
+      <div class="qr-placeholder">微信二维码<br>替换图片</div>
+      <div>
+        <h2>迁移前先微信核对</h2>
+        <p>扫码加微信，发送当前网站类型、服务器环境、数据库情况和希望迁移时间。我们帮你梳理迁移步骤和风险点。</p>
+      </div>
+    </div>
+
+    <p>如果还没确定服务器配置，先看 <a href="/guides/hong-kong-server/">香港服务器怎么选</a>。</p>
+  </main>
+  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云</div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
