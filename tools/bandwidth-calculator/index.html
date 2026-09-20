@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>服务器带宽估算器｜按页面大小和峰值访问量计算｜聚搜云</title>
+  <meta name="description" content="免费估算网站服务器所需公网带宽，输入页面大小、峰值访问量、静态资源分流和预留比例即可在浏览器本地计算。">
+  <link rel="canonical" href="https://fuseiniadam986.github.io/tools/bandwidth-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="聚搜云">
+  <meta property="og:title" content="服务器带宽估算器｜聚搜云">
+  <meta property="og:description" content="不提交表单，按页面大小和峰值访问量估算服务器带宽。">
+  <meta property="og:image" content="https://fuseiniadam986.github.io/assets/hong-kong-cloud-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/header_logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">采购指南</a><a href="/guides/server-region-comparison/">服务器地域</a><a href="/guides/cloud-vendor-comparison/">云厂商选择</a><a href="/guides/hong-kong-bandwidth/" aria-current="location">带宽与线路</a><a href="/guides/hong-kong-server-cost/">成本与续费</a><a href="/guides/cloud-quote-checklist/">报价核对</a><a href="/guides/hong-kong-server-migration/">迁移准备</a></div><a class="header-cta" href="#wechat">微信咨询</a></nav></header>
+  <main>
+    <section class="article-hero"><div class="article-hero-inner"><div><p class="article-meta">本地计算工具 · 不上传数据</p><h1>服务器带宽估算器</h1><p class="lead">根据平均页面大小、峰值访问量、CDN 或对象存储分流比例，以及业务预留空间，快速估算源站需要的公网带宽。结果用于初步选型，正式采购前仍应通过压力测试和监控验证。</p></div><div class="aside-card"><h3>计算公式</h3><p>页面大小 × 8 × 每秒访问次数 × 源站承担比例 × 预留系数</p><p>所有输入只在当前浏览器计算，不会提交到服务器。</p></div></div></section>
+    <section class="section tint"><div class="container" data-bandwidth-calculator>
+      <div class="calculator-grid">
+        <div class="calculator-panel" aria-label="带宽估算参数">
+          <label>平均页面传输大小（MB）<input name="page-size" type="number" min="0.1" step="0.1" value="1.5" inputmode="decimal"></label>
+          <label>峰值页面访问次数（次/分钟）<input name="peak-visits" type="number" min="1" step="1" value="120" inputmode="numeric"></label>
+          <label>CDN 或对象存储分流比例（%）<input name="offload" type="number" min="0" max="100" step="5" value="60" inputmode="numeric"></label>
+          <label>突发流量预留比例（%）<input name="reserve" type="number" min="0" step="5" value="30" inputmode="numeric"></label>
+        </div>
+        <div class="result-panel" aria-live="polite"><h2>估算源站带宽</h2><div class="result-number" data-result>6.2 Mbps</div><h3 data-recommendation>建议从 10 Mbps 档位测试</h3><p>这不是并发用户上限。接口请求、图片下载、视频、大文件、缓存命中率和网络重传都会改变实际结果。</p></div>
+      </div>
+      <div class="note">估算器不会收集联系方式，也不会上传输入。正式上线前建议在目标用户地区进行晚高峰访问测试，并观察服务器出网带宽峰值。</div>
+      <div class="inline-wechat" id="wechat"><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"><div><h3>不确定参数怎么填？发送关键词“带宽”</h3><p>扫码加微信，把网站类型、主要访问地区、页面大小和预计访问量发给我们核对。</p></div></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云。估算结果不能替代压力测试与正式报价。</div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

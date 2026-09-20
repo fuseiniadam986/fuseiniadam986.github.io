@@ -633,6 +633,107 @@ tr:last-child td {
   font-size: 14px;
 }
 
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+  color: #31577f;
+  font-weight: 700;
+}
+
+.breadcrumb {
+  padding: 12px 0;
+  color: #70849b;
+  background: #f7faff;
+  border-bottom: 1px solid #e5edf6;
+  font-size: 14px;
+}
+
+.breadcrumb .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.breadcrumb a { color: #326da8; }
+.breadcrumb b { color: #aab8c6; font-weight: 400; }
+
+.identity-grid,
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.identity-panel,
+.calculator-panel,
+.result-panel {
+  padding: 24px;
+  border: 1px solid #dbe8f5;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.identity-panel h2,
+.identity-panel h3 { margin-bottom: 12px; }
+
+.calculator-panel label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #23496f;
+  font-weight: 800;
+}
+
+.calculator-panel input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #bcd1e5;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.calculator-panel input:focus {
+  outline: 3px solid rgba(11, 124, 248, .16);
+  border-color: var(--blue);
+}
+
+.result-panel {
+  display: grid;
+  align-content: center;
+  color: #fff;
+  background: #0b2a5d;
+}
+
+.result-panel h2,
+.result-panel h3 { color: #fff; }
+
+.result-number {
+  margin: 14px 0 8px;
+  color: #6bc2ff;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.source-list a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 1180px) {
   :root { --pad: 40px; }
 
@@ -759,6 +860,19 @@ tr:last-child td {
 
   .section-head {
     display: block;
+  }
+
+  .site-footer .container {
+    display: grid;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .identity-grid,
+  .calculator-grid {
+    grid-template-columns: 1fr;
   }
 
   .section-head p {
