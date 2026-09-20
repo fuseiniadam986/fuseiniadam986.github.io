@@ -66,9 +66,9 @@ a:hover { color: var(--blue); }
 .nav {
   height: 100%;
   display: grid;
-  grid-template-columns: 168px 1fr auto;
+  grid-template-columns: 154px 1fr auto;
   align-items: center;
-  gap: 26px;
+  gap: 20px;
 }
 
 .brand img {
@@ -81,9 +81,9 @@ a:hover { color: var(--blue); }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(18px, 2vw, 34px);
+  gap: clamp(12px, 1.35vw, 24px);
   color: #173961;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -112,6 +112,15 @@ a:hover { color: var(--blue); }
   right: 0;
 }
 
+.nav-links a[aria-current] {
+  color: var(--blue);
+}
+
+.nav-links a[aria-current]::after {
+  left: 0;
+  right: 0;
+}
+
 .header-cta {
   height: 40px;
   padding: 0 20px;
@@ -130,7 +139,7 @@ a:hover { color: var(--blue); }
   color: #fff;
   background:
     linear-gradient(90deg, rgba(5, 24, 52, .92) 0%, rgba(5, 24, 52, .72) 43%, rgba(5, 24, 52, .10) 100%),
-    url("/assets/hong-kong-cloud-hero.png") center / cover no-repeat;
+    url("/assets/hong-kong-cloud-hero.webp") center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -447,7 +456,7 @@ h3 {
 .article-hero {
   background:
     linear-gradient(120deg, rgba(245, 251, 255, .97), rgba(255, 255, 255, .88)),
-    url("/assets/hong-kong-cloud-hero.png") center / cover no-repeat;
+    url("/assets/hong-kong-cloud-hero.webp") center / cover no-repeat;
   border-bottom: 1px solid #e4edf7;
 }
 
@@ -489,6 +498,7 @@ h3 {
 }
 
 .article-card {
+  min-width: 0;
   padding: 38px;
   border: 1px solid #e4edf7;
   border-radius: 8px;
@@ -573,7 +583,10 @@ h3 {
 
 .table-wrap {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
   margin: 22px 0;
   border: 1px solid #e4edf7;
   border-radius: 8px;
@@ -678,11 +691,18 @@ tr:last-child td {
     padding: 4px 0 2px;
     font-size: 14px;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
     height: auto;
     flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 
   .nav-links a::after {
@@ -693,7 +713,7 @@ tr:last-child td {
     min-height: auto;
     background:
       linear-gradient(180deg, rgba(5, 24, 52, .94), rgba(5, 24, 52, .82)),
-      url("/assets/hong-kong-cloud-hero.png") center / cover no-repeat;
+      url("/assets/hong-kong-cloud-hero.webp") center / cover no-repeat;
   }
 
   .hero-inner {
@@ -712,9 +732,17 @@ tr:last-child td {
 
   .grid,
   .process,
-  .service-grid,
-  .vendor-strip {
+  .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .vendor-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .vendor {
+    height: 72px;
   }
 
   .hero-promises {
