@@ -15,6 +15,7 @@ const pathLabels = {
   "/guides/hong-kong-bandwidth/": "带宽与线路",
   "/guides/cloud-quote-checklist/": "报价核对",
   "/guides/hong-kong-server-migration/": "迁移准备",
+  "/guides/hong-kong-server-speed-test/": "速度排查",
   "/guides/server-region-comparison/": "服务器地域",
   "/guides/cloud-vendor-comparison/": "云厂商选择",
   "/tools/bandwidth-calculator/": "带宽估算器",
@@ -41,6 +42,42 @@ const graph = [
     inLanguage: "zh-CN"
   }
 ];
+
+const faqList = document.querySelector("[data-faq-list]");
+if (faqList) {
+  const mainEntity = [...faqList.querySelectorAll("details")].map((item) => ({
+    "@type": "Question",
+    name: item.querySelector("summary")?.textContent.trim() || "",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.querySelector("p")?.textContent.trim() || ""
+    }
+  })).filter((item) => item.name && item.acceptedAnswer.text);
+
+  if (mainEntity.length) graph.push({ "@type": "FAQPage", mainEntity });
+}
+
+if (window.location.pathname === "/guides/") {
+  graph.push({
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: pageUrl,
+    isPartOf: { "@id": `${siteUrl}/#website` }
+  });
+}
+
+if (window.location.pathname === "/tools/bandwidth-calculator/") {
+  graph.push({
+    "@type": "WebApplication",
+    name: "服务器带宽估算器",
+    description,
+    url: pageUrl,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Any",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "CNY" }
+  });
+}
 
 if (document.querySelector(".article-card")) {
   const dateText = document.querySelector(".article-meta")?.textContent || "";
@@ -84,6 +121,12 @@ if (pathLabel && window.location.pathname !== "/") {
     main.prepend(breadcrumb);
   }
 }
+
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  if (new URL(link.href, window.location.origin).pathname === window.location.pathname) {
+    link.setAttribute("aria-current", "page");
+  }
+});
 
 const schema = document.createElement("script");
 schema.type = "application/ld+json";

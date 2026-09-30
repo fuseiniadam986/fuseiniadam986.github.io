@@ -14,6 +14,7 @@
 - 香港服务器带宽选择：`guides/hong-kong-bandwidth/index.html`
 - 云服务器报价核对清单：`guides/cloud-quote-checklist/index.html`
 - 香港服务器迁移准备：`guides/hong-kong-server-migration/index.html`
+- 香港服务器速度与故障排查：`guides/hong-kong-server-speed-test/index.html`
 - 服务器带宽估算器：`tools/bandwidth-calculator/index.html`
 - 关于聚搜云：`about/index.html`
 - 自定义错误页：`404.html`
@@ -24,7 +25,7 @@
 
 微信二维码图片已放在 `assets/weixinqr.jpg`，所有咨询模块都引用该图片。
 
-带宽估算器仅在浏览器本地计算，不提交输入数据。全站公共脚本会生成面包屑、页脚官网入口，以及 `Organization`、`WebSite`、`Article` 和 `BreadcrumbList` 结构化数据。
+带宽估算器仅在浏览器本地计算，不提交输入数据。全站公共脚本会生成面包屑、页脚官网入口，以及 `Organization`、`WebSite`、`Article`、`BreadcrumbList`、`FAQPage`、`CollectionPage` 和 `WebApplication` 结构化数据。
 
 首屏背景使用 `assets/hong-kong-cloud-hero.webp`，原始 PNG 保留为源素材，不参与页面加载。
 

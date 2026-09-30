@@ -734,6 +734,52 @@ tr:last-child td {
   text-underline-offset: 3px;
 }
 
+.faq-section {
+  max-width: 1040px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-list details {
+  padding: 0 22px;
+  background: #fff;
+  border: 1px solid #dce9f5;
+  border-radius: 8px;
+}
+
+.faq-list summary {
+  padding: 18px 32px 18px 0;
+  position: relative;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker { display: none; }
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.faq-list details[open] summary::after { content: "-"; }
+
+.faq-list p {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #536b84;
+}
+
 @media (max-width: 1180px) {
   :root { --pad: 40px; }
 
@@ -794,6 +840,8 @@ tr:last-child td {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+    touch-action: pan-x;
   }
 
   .nav-links::-webkit-scrollbar {
@@ -905,6 +953,21 @@ tr:last-child td {
 
   .article-card {
     padding: 24px 18px;
+  }
+
+  .table-wrap::before {
+    content: "表格可左右滑动查看";
+    display: block;
+    margin-bottom: 8px;
+    color: #71839a;
+    font-size: 13px;
+  }
+
+  .faq-list details { padding-inline: 16px; }
+
+  .faq-list summary {
+    font-size: 17px;
+    line-height: 1.45;
   }
 
   .article-card h2 {
