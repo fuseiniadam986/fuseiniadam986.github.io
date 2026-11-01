@@ -2,6 +2,8 @@
 
 这是一个可直接发布到 GitHub Pages 的静态内容站，方向是云服务器采购前的选型、报价核对和迁移咨询。
 
+在线访问：[https://fuseiniadam986.github.io/](https://fuseiniadam986.github.io/)
+
 ## 已包含页面
 
 - 首页：`index.html`
@@ -15,6 +17,7 @@
 - 云服务器报价核对清单：`guides/cloud-quote-checklist/index.html`
 - 香港服务器迁移准备：`guides/hong-kong-server-migration/index.html`
 - 香港服务器速度与故障排查：`guides/hong-kong-server-speed-test/index.html`
+- 香港服务器 5M 带宽测算：`guides/hong-kong-server-5mbps-bandwidth/index.html`
 - 服务器带宽估算器：`tools/bandwidth-calculator/index.html`
 - 关于聚搜云：`about/index.html`
 - 自定义错误页：`404.html`

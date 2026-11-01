@@ -16,6 +16,7 @@ const pathLabels = {
   "/guides/cloud-quote-checklist/": "报价核对",
   "/guides/hong-kong-server-migration/": "迁移准备",
   "/guides/hong-kong-server-speed-test/": "速度排查",
+  "/guides/hong-kong-server-5mbps-bandwidth/": "5M 带宽测算",
   "/guides/server-region-comparison/": "服务器地域",
   "/guides/cloud-vendor-comparison/": "云厂商选择",
   "/tools/bandwidth-calculator/": "带宽估算器",
@@ -28,7 +29,8 @@ const organization = {
   name: "聚搜云（深圳）信息有限公司",
   alternateName: "聚搜云",
   url: "https://www.jusou.net/",
-  logo: `${siteUrl}/assets/header_logo.png`
+  logo: `${siteUrl}/assets/header_logo.png`,
+  sameAs: ["https://www.jusou.net/"]
 };
 
 const graph = [
