@@ -18,6 +18,7 @@
 - 香港服务器迁移准备：`guides/hong-kong-server-migration/index.html`
 - 香港服务器速度与故障排查：`guides/hong-kong-server-speed-test/index.html`
 - 香港服务器 5M 带宽测算：`guides/hong-kong-server-5mbps-bandwidth/index.html`
+- 20 篇配置、场景、运维和采购专题：由 `scripts/generate-topic-guides.mjs` 统一生成
 - 服务器带宽估算器：`tools/bandwidth-calculator/index.html`
 - 关于聚搜云：`about/index.html`
 - 自定义错误页：`404.html`

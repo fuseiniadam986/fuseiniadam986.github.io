@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>香港服务器迁移时 DNS 怎么切换？TTL、验证与回退｜聚搜云</title>
+  <meta name="description" content="香港服务器迁移 DNS 切换指南，说明 TTL 调整、旧站同步、hosts 验证、解析切换、缓存传播和回退步骤。">
+  <link rel="canonical" href="https://fuseiniadam986.github.io/guides/hong-kong-server-dns-migration/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="聚搜云"><meta property="og:title" content="香港服务器迁移时 DNS 怎么切换？TTL、验证与回退"><meta property="og:description" content="香港服务器迁移 DNS 切换指南，说明 TTL 调整、旧站同步、hosts 验证、解析切换、缓存传播和回退步骤。"><meta property="og:image" content="https://fuseiniadam986.github.io/assets/hong-kong-cloud-hero.webp"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/header_logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">采购指南</a><a href="/guides/server-region-comparison/">服务器地域</a><a href="/guides/cloud-vendor-comparison/">云厂商选择</a><a href="/guides/hong-kong-bandwidth/">带宽与线路</a><a href="/guides/hong-kong-server-cost/">成本与续费</a><a href="/guides/cloud-quote-checklist/">报价核对</a><a href="/guides/hong-kong-server-migration/">迁移准备</a></div><a class="header-cta" href="#wechat">微信咨询</a></nav></header>
+  <main>
+    <section class="article-hero"><div class="article-hero-inner"><div><p class="article-meta">DNS 迁移操作 · 更新于 2026-11-01</p><h1>香港服务器迁移时 DNS 怎么切换？TTL、验证与回退</h1><p class="lead">DNS 切换看似只是修改一条记录，实际还涉及缓存时间、旧站数据同步、证书、回调白名单和回退窗口。准备充分可以显著减少中断。</p></div><div class="aside-card"><h3>拿现有方案来核对</h3><p>扫码发送业务情况、现有配置或报价截图，聚搜云帮你整理还需要问清楚的项目。</p><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></div></section>
+    <section class="article-layout"><article class="article-card">
+      <div class="toc"><strong>先看判断重点：</strong><ul><li>切换前提前评估并调整 TTL</li><li>使用本地解析验证新服务器完整功能</li><li>切换期间保持旧站可用并同步关键数据</li><li>明确监控指标与回退触发条件</li></ul></div>
+      <h2>先把需求放进同一张表</h2><div class="table-wrap"><table><tbody><tr><th>阶段</th><th>主要动作</th><th>验证重点</th></tr><tr><td>准备</td><td>盘点记录、降低 TTL</td><td>解析权限和证书</td></tr><tr><td>预检</td><td>hosts 或测试域名访问</td><td>页面、接口和回调</td></tr><tr><td>切换</td><td>修改记录并持续监控</td><td>多地解析与业务日志</td></tr><tr><td>收尾</td><td>保留旧站后再下线</td><td>无旧流量和数据遗漏</td></tr></tbody></table></div>
+      <h2>不要在切换当天才降低 TTL</h2><p>递归 DNS 和客户端可能缓存旧记录。提前调整可以缩短后续传播时间，但实际缓存行为仍可能存在差异，应保留足够的双站运行窗口。</p>
+<h2>先绕过公共 DNS 验证新站</h2><p>使用 hosts 或测试域名检查 HTTPS、静态资源、数据库连接、上传、邮件、支付回调和管理后台，避免把应用故障误判为 DNS 问题。</p>
+<h2>用业务指标决定是否回退</h2><p>约定错误率、关键功能、数据一致性和响应时间的阈值。达到条件时按预案恢复旧解析，并处理切换期间产生的数据。</p>
+      <h2>采购或调整前核对清单</h2><ul class="checklist"><li>DNS 账号与全部记录</li><li>TTL 和切换时间</li><li>证书与第三方白名单</li><li>新旧数据同步</li><li>监控与回退条件</li></ul>
+      <div class="wechat-box" id="wechat"><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"><div><h2>不填表，直接带着问题来</h2><p>发送用途、用户地区、当前配置、预算和遇到的问题，我们会先帮你把配置、网络、费用与服务边界核对清楚。</p></div></div>
+      <h2>继续阅读</h2><p>建议继续查看<a href="/guides/hong-kong-server-migration/">服务器迁移准备清单</a>，还可以阅读<a href="/guides/hong-kong-server-speed-test/">香港服务器速度排查</a>，把相关条件放在一起判断。</p>
+    </article><aside class="article-aside"><div class="aside-card"><h3>沟通前准备</h3><ul class="checklist"><li>DNS 账号与全部记录</li><li>TTL 和切换时间</li><li>证书与第三方白名单</li><li>新旧数据同步</li></ul><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></aside></section>
+  </main>
+  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云。具体配置、价格和服务范围以厂商正式订单与合同为准。</div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

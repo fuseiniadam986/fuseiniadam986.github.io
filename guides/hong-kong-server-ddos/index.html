@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>香港服务器 DDoS 防护怎么选？防护范围与回源风险｜聚搜云</title>
+  <meta name="description" content="香港服务器 DDoS 防护选购指南，核对基础防护、高防 IP、清洗能力、协议端口、回源保护、封禁策略和费用。">
+  <link rel="canonical" href="https://fuseiniadam986.github.io/guides/hong-kong-server-ddos/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="聚搜云"><meta property="og:title" content="香港服务器 DDoS 防护怎么选？防护范围与回源风险"><meta property="og:description" content="香港服务器 DDoS 防护选购指南，核对基础防护、高防 IP、清洗能力、协议端口、回源保护、封禁策略和费用。"><meta property="og:image" content="https://fuseiniadam986.github.io/assets/hong-kong-cloud-hero.webp"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/header_logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">采购指南</a><a href="/guides/server-region-comparison/">服务器地域</a><a href="/guides/cloud-vendor-comparison/">云厂商选择</a><a href="/guides/hong-kong-bandwidth/">带宽与线路</a><a href="/guides/hong-kong-server-cost/">成本与续费</a><a href="/guides/cloud-quote-checklist/">报价核对</a><a href="/guides/hong-kong-server-migration/">迁移准备</a></div><a class="header-cta" href="#wechat">微信咨询</a></nav></header>
+  <main>
+    <section class="article-hero"><div class="article-hero-inner"><div><p class="article-meta">网络安全防护 · 更新于 2026-11-01</p><h1>香港服务器 DDoS 防护怎么选？防护范围与回源风险</h1><p class="lead">“带防护”不能只看一个容量数字。攻击类型、协议、端口、触发策略、回源暴露和超量处理方式，都会影响实际效果。</p></div><div class="aside-card"><h3>拿现有方案来核对</h3><p>扫码发送业务情况、现有配置或报价截图，聚搜云帮你整理还需要问清楚的项目。</p><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></div></section>
+    <section class="article-layout"><article class="article-card">
+      <div class="toc"><strong>先看判断重点：</strong><ul><li>先根据业务协议确认防护覆盖范围</li><li>高防入口之外还要保护真实源站地址</li><li>超出能力后的封禁与恢复规则要问清</li><li>演练和监控决定故障时能否快速切换</li></ul></div>
+      <h2>先把需求放进同一张表</h2><div class="table-wrap"><table><tbody><tr><th>核对项</th><th>需要确认</th><th>潜在风险</th></tr><tr><td>防护对象</td><td>IP、域名、端口与协议</td><td>业务不在覆盖范围</td></tr><tr><td>触发方式</td><td>自动或人工切换</td><td>攻击时切换过慢</td></tr><tr><td>回源</td><td>源站隐藏和访问控制</td><td>绕过高防直打源站</td></tr><tr><td>超量处理</td><td>封禁、限速与费用</td><td>业务长时间不可用</td></tr></tbody></table></div>
+      <h2>按业务协议选择产品</h2><p>网站、游戏、API 和自定义 TCP 服务的防护方式可能不同。采购前列出域名、端口、协议和正常峰值，确认正式产品是否全部覆盖。</p>
+<h2>高防入口不能暴露真实源站</h2><p>如果历史 DNS、邮件记录或其他服务暴露源站 IP，攻击者可能绕过防护。切换前应梳理入口并限制源站只接受可信回源。</p>
+<h2>把攻击后的处理规则写清楚</h2><p>确认触发阈值、清洗时延、超量封禁、解封条件、日志报告和额外费用。不要等攻击发生后才寻找这些信息。</p>
+      <h2>采购或调整前核对清单</h2><ul class="checklist"><li>业务协议和端口</li><li>正常流量峰值</li><li>防护与超量规则</li><li>源站隐藏和访问控制</li><li>告警切换与解封流程</li></ul>
+      <div class="wechat-box" id="wechat"><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"><div><h2>不填表，直接带着问题来</h2><p>发送用途、用户地区、当前配置、预算和遇到的问题，我们会先帮你把配置、网络、费用与服务边界核对清楚。</p></div></div>
+      <h2>继续阅读</h2><p>建议继续查看<a href="/guides/cloud-quote-checklist/">云服务器报价核对清单</a>，还可以阅读<a href="/guides/hong-kong-server-speed-test/">香港服务器速度排查</a>，把相关条件放在一起判断。</p>
+    </article><aside class="article-aside"><div class="aside-card"><h3>沟通前准备</h3><ul class="checklist"><li>业务协议和端口</li><li>正常流量峰值</li><li>防护与超量规则</li><li>源站隐藏和访问控制</li></ul><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></aside></section>
+  </main>
+  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云。具体配置、价格和服务范围以厂商正式订单与合同为准。</div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

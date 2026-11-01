@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>香港服务器监控哪些指标？资源、网络与业务告警｜聚搜云</title>
+  <meta name="description" content="香港服务器监控指南，整理 CPU、内存、磁盘、带宽、延迟、端口、证书、日志和业务可用性告警重点。">
+  <link rel="canonical" href="https://fuseiniadam986.github.io/guides/hong-kong-server-monitoring/">
+  <meta property="og:type" content="article"><meta property="og:site_name" content="聚搜云"><meta property="og:title" content="香港服务器监控哪些指标？资源、网络与业务告警"><meta property="og:description" content="香港服务器监控指南，整理 CPU、内存、磁盘、带宽、延迟、端口、证书、日志和业务可用性告警重点。"><meta property="og:image" content="https://fuseiniadam986.github.io/assets/hong-kong-cloud-hero.webp"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/assets/header_logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="/" aria-label="聚搜云首页"><img src="/assets/header_logo.png" alt="聚搜云"></a><div class="nav-links"><a href="/guides/">采购指南</a><a href="/guides/server-region-comparison/">服务器地域</a><a href="/guides/cloud-vendor-comparison/">云厂商选择</a><a href="/guides/hong-kong-bandwidth/">带宽与线路</a><a href="/guides/hong-kong-server-cost/">成本与续费</a><a href="/guides/cloud-quote-checklist/">报价核对</a><a href="/guides/hong-kong-server-migration/">迁移准备</a></div><a class="header-cta" href="#wechat">微信咨询</a></nav></header>
+  <main>
+    <section class="article-hero"><div class="article-hero-inner"><div><p class="article-meta">运行监控体系 · 更新于 2026-11-01</p><h1>香港服务器监控哪些指标？资源、网络与业务告警</h1><p class="lead">只有服务器“开机”不代表业务正常。有效监控要同时覆盖资源、网络、应用和用户真正能访问到的业务结果。</p></div><div class="aside-card"><h3>拿现有方案来核对</h3><p>扫码发送业务情况、现有配置或报价截图，聚搜云帮你整理还需要问清楚的项目。</p><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></div></section>
+    <section class="article-layout"><article class="article-card">
+      <div class="toc"><strong>先看判断重点：</strong><ul><li>资源监控用于发现容量与异常变化</li><li>外部探测才能发现线路和入口故障</li><li>告警阈值需要结合持续时间</li><li>告警必须对应明确的处理人和步骤</li></ul></div>
+      <h2>先把需求放进同一张表</h2><div class="table-wrap"><table><tbody><tr><th>层级</th><th>建议监控</th><th>能发现的问题</th></tr><tr><td>主机</td><td>CPU、内存、磁盘、负载</td><td>资源不足或异常进程</td></tr><tr><td>网络</td><td>带宽、连接、延迟、丢包</td><td>出口到顶或线路波动</td></tr><tr><td>应用</td><td>响应时间、错误率、日志</td><td>程序和依赖故障</td></tr><tr><td>业务</td><td>登录、下单或接口结果</td><td>用户可见故障</td></tr></tbody></table></div>
+      <h2>不要只装一个主机监控</h2><p>主机指标正常时，DNS、证书、网络线路或应用依赖仍可能故障。应从不同网络位置发起外部探测，模拟真实用户访问。</p>
+<h2>告警要避免太敏感或太迟钝</h2><p>短暂波动不一定需要叫醒处理人，但持续异常必须及时发现。阈值、持续时间和告警级别应根据业务影响设置，并定期复盘误报。</p>
+<h2>每条告警都要能执行</h2><p>告警信息应包含主机、指标、时间和相关日志入口，并明确联系人和处理步骤。只有消息没有责任人，往往仍会延误恢复。</p>
+      <h2>采购或调整前核对清单</h2><ul class="checklist"><li>主机资源指标</li><li>网络与外部可用性</li><li>应用响应和错误率</li><li>证书域名到期</li><li>告警联系人与处理手册</li></ul>
+      <div class="wechat-box" id="wechat"><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"><div><h2>不填表，直接带着问题来</h2><p>发送用途、用户地区、当前配置、预算和遇到的问题，我们会先帮你把配置、网络、费用与服务边界核对清楚。</p></div></div>
+      <h2>继续阅读</h2><p>建议继续查看<a href="/guides/hong-kong-server-speed-test/">香港服务器速度排查</a>，还可以阅读<a href="/guides/cloud-quote-checklist/">云服务器报价核对清单</a>，把相关条件放在一起判断。</p>
+    </article><aside class="article-aside"><div class="aside-card"><h3>沟通前准备</h3><ul class="checklist"><li>主机资源指标</li><li>网络与外部可用性</li><li>应用响应和错误率</li><li>证书域名到期</li></ul><img class="qr-image" src="/assets/weixinqr.jpg" alt="聚搜云微信二维码"></div></aside></section>
+  </main>
+  <footer class="site-footer"><div class="container">© <span data-year></span> 聚搜云。具体配置、价格和服务范围以厂商正式订单与合同为准。</div></footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
